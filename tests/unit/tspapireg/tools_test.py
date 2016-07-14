@@ -27,9 +27,9 @@ class ToolsTests(TestCase):
 
     def test_auth_data_default(self):
         a = AuthData()
-        self.assertIsNone(a.api_host)
-        self.assertIsNone(a.email)
-        self.assertIsNone(a.api_token)
+        self.assertIsNotNone(a.api_host)
+        self.assertIsNotNone(a.email)
+        self.assertIsNotNone(a.api_token)
 
     def test_auth_data_environment(self):
         api_host = 'foo.bar'
